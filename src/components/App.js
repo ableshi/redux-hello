@@ -8,14 +8,7 @@ class App extends Component {
   render(){
     return(
       <Provider store={store}>
-        <div>
-          <div className="top  clearfix">
-            <PostBody />
-          </div>
-          <div className="bottom clearfix">
-            <CommentBox />
-          </div>
-        </div>
+        {this.props.children}
       </Provider>
     )
   }
