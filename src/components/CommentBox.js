@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
-
+import store from '../store';
 
 class CommentBox extends Component {
   constructor(){
     super();
     this.state = {
-      comments: [
-        "hello1",
-        "hello2"
-      ]
+      comments: store.getState()
     }
   }
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.refs.content.value);
-    let content = this.refs.content.value;
-    let comments =   this.state.comments;
-    comments.push(content);
-    this.setState({ comments });
     this.refs.commentForm.reset();
   }
   render(){
