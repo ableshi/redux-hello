@@ -20,6 +20,11 @@ class CommentBox extends Component {
     return(
       <div className="comment-box">
         { commentList }
+        <form className="comment-form">
+          <input type="text" className="input" />
+          <button type="submit" className="submit-btn" >提交</button>
+        </form>
+        <div className="underline"></div>
       </div>
     )
   }

@@ -31,6 +31,37 @@ body {
   margin: 60px auto;
 }
 
+.comment-box {
+  position: relative;
+}
+.comment-box .comment-form {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+}
+
+.comment-form .input {
+  width: 300px;
+  border: none;
+  outline: none;
+}
+.underline {
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  left: 16px;
+  border-top: none;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+.submit-btn {
+  color: white;
+  font-weight: bold;
+  background-color: deeppink;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
 
 .post-body {
   position: relative;
