@@ -28,11 +28,11 @@ class CommentBox extends Component {
     return(
       <div className="comment-box">
         { commentList }
-        <form ref="commentForm" onSubmit={this.handleSubmit.bind(this)}>
+        <form ref="commentForm" onSubmit={this.handleSubmit.bind(this)} className="comment-form">
           <input type="text" ref="comment" className="input"/>
           <input type="submit" className="submit-btn"/>
-          <div className="underline"></div>
         </form>
+        <div className="underline"></div>
       </div>
     )
   }
