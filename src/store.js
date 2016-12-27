@@ -1,10 +1,10 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
-let comments = [
-  "hello1",
-  "hello2"
-]
+let comments = {
+  1: ['nice course', 'help me a lot'],
+  2: ['really good', 'save me lots of time']
+}
 
 const courses = [
   {

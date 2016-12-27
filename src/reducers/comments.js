@@ -1,12 +1,20 @@
-function commentReducer(state = [], action) {
-  // console.log(state, action);
-  switch (action.type) {
+function courseComments(state = [], action) {
+  switch(action.type){
     case 'ADD_COMMENT':
-      // console.log([...state, action.comment])
-      return [...state, action.comment]
+      return [...state, action.comment];
     default:
       return state;
   }
+}
+
+function commentReducer(state = [], action) {
+  if(typeof action.courseId !== 'undefined') {
+    return {
+      ...state,
+      [action.courseId]: courseComments(state[action.courseId], action)
+    }
+  }
+  return state;
 }
 
 export default commentReducer;

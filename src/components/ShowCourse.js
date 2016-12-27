@@ -7,10 +7,10 @@ export class ShowCourse extends Component {
     return (
       <div>
         <div className="top  clearfix">
-          <PostBody />
+          <PostBody courseId={this.props.params.courseId} />
         </div>
         <div className="bottom clearfix">
-          <CommentBox />
+          <CommentBox courseId={this.props.params.courseId} />
         </div>
       </div>
     );

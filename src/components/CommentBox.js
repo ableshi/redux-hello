@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 import store from '../store';
 
 class CommentBox extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      comments: store.getState().comments
+      comments: store.getState().comments[this.props.courseId]
     }
   }
   handleSubmit(e){
     e.preventDefault();
-    console.log(store.getState());
-    store.dispatch({type: 'ADD_COMMENT', comment: this.refs.comment.value});
+    store.dispatch({type: 'ADD_COMMENT', comment: this.refs.comment.value, courseId: this.props.courseId});
     this.refs.commentForm.reset();
-    this.setState({comments: store.getState().comments});
+    console.log(store.getState())
+    this.setState({comments: store.getState().comments[this.props.courseId]});
   }
   render(){
     let commentList = this.state.comments.map((comment, i)=>{

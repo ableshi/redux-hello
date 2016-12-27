@@ -7,7 +7,7 @@ class PostBody extends Component {
     return(
       <div className="post-body">
         <div className="comment-num">
-          { this.props.comments.length }
+          { this.props.comments[this.props.courseId].length }
         </div>
       </div>
     )
