@@ -1,6 +1,11 @@
 body {
   margin: 0;
 }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -84,6 +89,19 @@ body {
 .post-body .num.likes {
   right: 120px;
 }
+
+.post-body .title {
+  font-size: 4em;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #bada55;
+  text-decoration: none;
+  padding-top: 100px;
+  width: 600px;
+  height: 300px;
+}
+
 
 .comment {
   padding: 16px;

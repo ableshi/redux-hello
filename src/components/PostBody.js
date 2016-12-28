@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import store from '../store';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class PostBody extends Component {
+
   handleClick(postId) {
     store.dispatch({type: 'INCREMENT_LIKES', index: postId - 1})
   }
@@ -10,6 +12,9 @@ class PostBody extends Component {
   render(){
     return(
       <div className="post-body">
+        <Link className="title" to={`/posts/${this.props.postId}`}>
+          {this.props.posts[this.props.postId - 1].title}
+        </Link>
         <div className="num comments">
           { this.props.comments[this.props.postId].length }
         </div>
