@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 import './main.css';
 import App from './components/App';
-import Courses from './components/Courses';
-import ShowCourse from './components/ShowCourse';
+import Home from './components/Home';
+import Post from './components/Post';
 
 const router = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Courses}></IndexRoute>
-      <Route path="/view/:courseId" component={ShowCourse}></Route>
+      <IndexRoute component={Home} />
+      <Route path="/posts/:postId" component={Post} />
     </Route>
   </Router>
 )

@@ -6,15 +6,15 @@ class CommentBox extends Component {
   constructor(props){
     super(props);
     this.state = {
-      comments: store.getState().comments[this.props.courseId]
+      comments: store.getState().comments[this.props.postId]
     }
   }
   handleSubmit(e){
     e.preventDefault();
-    store.dispatch({type: 'ADD_COMMENT', comment: this.refs.comment.value, courseId: this.props.courseId});
+    store.dispatch({type: 'ADD_COMMENT', comment: this.refs.comment.value, postId: this.props.postId});
     this.refs.commentForm.reset();
     console.log(store.getState())
-    this.setState({comments: store.getState().comments[this.props.courseId]});
+    this.setState({comments: store.getState().comments[this.props.postId]});
   }
   render(){
     let commentList = this.state.comments.map((comment, i)=>{

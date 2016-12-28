@@ -8,10 +8,10 @@ function courseComments(state = [], action) {
 }
 
 function commentReducer(state = [], action) {
-  if(typeof action.courseId !== 'undefined') {
+  if(typeof action.postId !== 'undefined') {
     return {
       ...state,
-      [action.courseId]: courseComments(state[action.courseId], action)
+      [action.postId]: courseComments(state[action.postId], action)
     }
   }
   return state;

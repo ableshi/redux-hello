@@ -1,4 +1,4 @@
-function courseReducer(state = [], action) {
+function postReducer(state = [], action) {
   switch(action.type) {
     case 'INCREMENT_LIKES':
       const i = action.index;
@@ -12,4 +12,4 @@ function courseReducer(state = [], action) {
   }
 }
 
-export default courseReducer;
+export default postReducer;

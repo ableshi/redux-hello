@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import PostBody from './PostBody';
 import CommentBox from './CommentBox';
 
-export class ShowCourse extends Component {
+export class Post extends Component {
   render() {
     return (
       <div>
         <div className="top  clearfix">
-          <PostBody courseId={this.props.params.courseId} />
+          <PostBody postId={this.props.params.postId} />
         </div>
         <div className="bottom clearfix">
-          <CommentBox courseId={this.props.params.courseId} />
+          <CommentBox postId={this.props.params.postId} />
         </div>
       </div>
     );
   }
 }
 
-export default ShowCourse;
+export default Post;
