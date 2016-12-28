@@ -9,7 +9,7 @@ class Home extends Component {
     )
 
     return (
-      <div>
+      <div className="home">
          { postList }
       </div>
     );

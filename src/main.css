@@ -19,8 +19,8 @@ body {
 
 
 .top {
-  height: 600px;
-  background-color: rgb(0, 188, 212);;
+  height: 400px;
+  background-color: rgb(0, 188, 212);
 }
 
 .bottom {
@@ -88,6 +88,7 @@ body {
 }
 .post-body .num.likes {
   right: 120px;
+  cursor: pointer;
 }
 
 .post-body .title {
@@ -106,4 +107,18 @@ body {
 .comment {
   padding: 16px;
   border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.home {
+  background-color: rgb(0, 188, 212);
+  padding: 40px 5px;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6em;
 }
