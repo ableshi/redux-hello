@@ -67,9 +67,8 @@ body {
   position: relative;
 }
 
-.post-body .comment-num {
+.post-body .num {
   position: absolute;
-  right: 20px;
   font-weight: bold;
   bottom: 20px;
   width: 80px;
@@ -78,6 +77,12 @@ body {
   text-align: center;
   background-color: rgb(242, 244, 246);
   color: rgb(76, 87, 101);
+}
+.post-body .num.comments {
+  right: 20px;
+}
+.post-body .num.likes {
+  right: 120px;
 }
 
 .comment {
