@@ -1,9 +1,8 @@
 import { createStore } from 'redux';
 
-
 let comments = [
-    "hello1",
-    "hello2"
+  "hello1",
+  "hello2"
 ]
 
 function commentReducer(state = [], action) {
@@ -17,6 +16,6 @@ function commentReducer(state = [], action) {
   }
 }
 
-let store = createStore(commentReducer, comments);
+const store = createStore(commentReducer, comments);
 
 export default store;
